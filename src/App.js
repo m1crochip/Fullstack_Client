@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   AppBar,
   Container,
@@ -6,13 +6,20 @@ import {
   Grow,
   Typography,
 } from "@material-ui/core";
-import memories from "./images/instal.png";
-import Posts from "./components/Posts";
-import Form from "./components/Form";
+import { useDispatch } from "react-redux";
+
+import memories from "./images/2659360.png";
+import Posts from "./components/Posts/Posts";
+import Form from "./components/Form/Form";
 import useStyles from "./styles";
 
 const App = () => {
   const classes = useStyles();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch();
+  }, []);
   return (
     <Container maxWidth="lg">
       <AppBar
